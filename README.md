@@ -7,52 +7,85 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# MatchMate - Football League Management System
+
+A Laravel-based web application for managing local football leagues, teams, players, fixtures, and results.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Simple, fast routing engine.
+- Powerful dependency injection container.
+- Multiple back-ends for session and cache storage.
+- Expressive, intuitive database ORM.
+- Database agnostic schema migrations.
+- Robust background job processing.
+- Real-time event broadcasting.
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Project Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- User authentication with roles (Admin, Manager, Fan)
+- Team management (Create, Read, Update, Delete)
+- Player management with team-specific access
+- Fixture scheduling and result reporting
+- Live league table generation
+- Responsive Bootstrap UI
+- Client-side and server-side validation
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Requirements
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+- PHP >= 8.1
+- MySQL >= 5.7
+- Composer
+- Node.js & NPM
 
-## Agentic Development
+## Installation
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
-
+1. **Clone the repository**
 ```bash
-composer require laravel/boost --dev
+git clone https://github.com/AliJay2025/matchmate-laravel.git
+cd matchmate-laravel
 
-php artisan boost:install
-```
+2. Install PHP dependencies
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+bash
+composer install
+3. Set up environment file
 
-## Contributing
+bash
+cp .env.example .env
+php artisan key:generate
+4. Configure database in .env
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+env
+DB_DATABASE=matchmate
+DB_USERNAME=root
+DB_PASSWORD=your_password
+5. Create database
 
-## Code of Conduct
+bash
+mysql -u root -p -e "CREATE DATABASE matchmate;"
+6. Run migrations
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+bash
+php artisan migrate
+7. Install NPM dependencies
 
-## Security Vulnerabilities
+bash
+npm install
+npm run build
+8. Start the application
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+bash
+php artisan serve
+9. Access the application
+Open browser: http://localhost:8000
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Project Team
+Name	Role
+Ali Jabriil	Developer
+Abdihafid Gahayr	Developer
+Abdirahman Farah	Developer
