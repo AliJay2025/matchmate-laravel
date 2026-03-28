@@ -44,7 +44,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Installation
 
-1. **Clone the repository**
+**1. Clone the repository**
 ```bash
 git clone https://github.com/AliJay2025/matchmate-laravel.git
 cd matchmate-laravel
