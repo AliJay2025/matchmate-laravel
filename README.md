@@ -69,7 +69,6 @@ MatchMate simplifies local football league management by replacing spreadsheets 
 ```bash
 git clone https://github.com/AliJay2025/matchmate-laravel.git
 cd matchmate-laravel
-
 2. Install PHP dependencies
 bash
 composer install
